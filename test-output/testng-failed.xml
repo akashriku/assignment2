@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="FirefoxTest(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.test.apptest.test.Testkayak">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchApp"/>
+          <include name="testKayakApp"/>
+        </methods>
+      </class> <!-- com.test.apptest.test.Testkayak -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test name="ieTest(failed)">
+    <parameter name="browser" value="internetexplorer"/>
+    <classes>
+      <class name="com.test.apptest.test.Testkayak">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchApp"/>
+          <include name="testKayakApp"/>
+        </methods>
+      </class> <!-- com.test.apptest.test.Testkayak -->
+    </classes>
+  </test> <!-- ieTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
