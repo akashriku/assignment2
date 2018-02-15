@@ -17,8 +17,5 @@ public class CityBean {
 	public static void setDestCity(String toCity) {
 		destCity = toCity;
 	}
-	
-	
-	
-
+		
 }
