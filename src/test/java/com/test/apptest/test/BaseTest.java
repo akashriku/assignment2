@@ -21,7 +21,7 @@ public class BaseTest {
 	@BeforeClass
 	public void launchApp(String browser)
 	{
-		 if(browser.equalsIgnoreCase("firefox")) {
+		 /*if(browser.equalsIgnoreCase("firefox")) {
 			 System.setProperty("webdriver.gecko.driver", "browserDriver\\geckodriver.exe");
 			  driver = new FirefoxDriver();
 		 
@@ -34,9 +34,9 @@ public class BaseTest {
 			 System.setProperty("webdriver.ie.driver","browserDriver\\IEDriverServer.exe");	
 			 driver=new InternetExplorerDriver();
 			 
-		 }
+		 }*/
 		 
-		 else if (browser.equalsIgnoreCase("Chrome")) 
+		 if (browser.equalsIgnoreCase("Chrome")) 
 		 { 
 		 
 			  // Here I am setting up the path for my IEDriver
