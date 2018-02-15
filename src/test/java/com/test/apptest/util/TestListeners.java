@@ -1,11 +1,5 @@
 package com.test.apptest.util;
 
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -13,59 +7,45 @@ import org.testng.ITestResult;
 
 public class TestListeners implements ITestListener{
 	 public WebDriver driver;
-	@Override
-	public void onFinish(ITestContext arg0) {
-		// TODO Auto-generated method stub
+	
+	public void onFinish(ITestContext result) {
+		
+		System.out.println("the result on the finish of the execution :-"+result.getName());
+	}
+
+	public void onStart(ITestContext result) {
+		System.out.println("the result on the start of the test case :-"+result.getName());
 		
 	}
 
-	public void onStart(ITestContext arg0) {
-		// TODO Auto-generated method stub
+	
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		System.out.println("the test failed and the success percentage is :-"+result.getTestName());
 		
 	}
 
-	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
-		// TODO Auto-generated method stub
+	
+	public void onTestFailure(ITestResult result) {
+		this.driver=((com.test.apptest.test.BaseTest)result.getInstance()).driver;
+		System.out.println("Following test got passed :- "+result.getName());
 		
 	}
 
-	@Override
-	public void onTestFailure(ITestResult arg0) {
-		this.driver=((com.test.apptest.test.BaseTest)arg0.getInstance()).driver;
-		System.out.println("Following test got passed : "+arg0.getName());
-		File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-		//FileUtils.copyFile(scrFile, new File("C:\\Users\\praveenkumar.dm\\QASWorkspace1\\apptest\\ScreenShots"+timeStamp+".png"));
+	
+	public void onTestSkipped(ITestResult result) {
+		this.driver=((com.test.apptest.test.BaseTest)result.getInstance()).driver;
+		System.out.println("Following test got passed :- "+result.getName());
 		
 	}
 
-	@Override
-	public void onTestSkipped(ITestResult arg0) {
-		this.driver=((com.test.apptest.test.BaseTest)arg0.getInstance()).driver;
-		System.out.println("Following test got passed : "+arg0.getName());
-		File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-		//FileUtils.copyFile(scrFile, new File("C:\\Users\\praveenkumar.dm\\QASWorkspace1\\apptest\\ScreenShots"+timeStamp+".png"));
-		
+   public void onTestStart(ITestResult result) {
+		System.out.println("on the start of the test case :-"+result.getName());	
 	}
 
-	@Override
-	public void onTestStart(ITestResult arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onTestSuccess(ITestResult arg0) {
-		this.driver=((com.test.apptest.test.BaseTest)arg0.getInstance()).driver;
-		System.out.println("Following test got passed : "+arg0.getName());
-		File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-		//FileUtils.copyFile(scrFile, new File("C:\\Users\\praveenkumar.dm\\QASWorkspace1\\apptest\\ScreenShots\\"+timeStamp+".png"));
+	public void onTestSuccess(ITestResult result) {
+		this.driver=((com.test.apptest.test.BaseTest)result.getInstance()).driver;
+		System.out.println("Following test got passed :- "+result.getName());
 		
 	}
 	
-	
-
 }

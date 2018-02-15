@@ -11,6 +11,7 @@ public class Testkayak extends BaseTest {
 	@Test
 	public void testKayakApp() throws InterruptedException
 	{
+	
 		KayakHomePage page= new KayakHomePage(driver);
 		page.selectMainCategory("Flights");
 		page.selectTripType("One-way");
@@ -23,12 +24,8 @@ public class Testkayak extends BaseTest {
 		result.getSourceCity();
 		result.getDescCity();
 		result.clickViewDeal();
-		Thread.sleep(5000);
-		
-	
-		
-		
+		Thread.sleep(5000);		
+
 	}
-	
 	
 }

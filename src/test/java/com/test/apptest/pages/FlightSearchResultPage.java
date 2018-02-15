@@ -7,8 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.test.apptest.bean.CityBean;
@@ -24,10 +22,11 @@ public class FlightSearchResultPage {
 	
 	
 	
-	public FlightSearchResultPage(WebDriver driver) {
+	public FlightSearchResultPage(WebDriver driver)
+	{
 		PageFactory.initElements(driver, this);
 		this.driver=driver;
-		}
+	}
 	
 	public void getSourceCity() throws InterruptedException
 	{
