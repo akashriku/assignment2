@@ -22,6 +22,7 @@ public class TestListeners implements ITestListener{
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		System.out.println("the test failed and the success percentage is :-"+result.getTestName());
 		
+		
 	}
 
 	
