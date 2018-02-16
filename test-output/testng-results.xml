@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="73745" started-at="2018-02-15T06:54:43Z" finished-at="2018-02-15T06:55:57Z">
+  <suite name="Suite" duration-ms="35956" started-at="2018-02-15T13:12:37Z" finished-at="2018-02-15T13:13:13Z">
     <groups>
     </groups>
-    <test name="ChromeTest" duration-ms="73745" started-at="2018-02-15T06:54:43Z" finished-at="2018-02-15T06:55:57Z">
+    <test name="ChromeTest" duration-ms="35956" started-at="2018-02-15T13:12:37Z" finished-at="2018-02-15T13:13:13Z">
       <class name="com.test.apptest.test.Testkayak">
-        <test-method status="PASS" signature="launchApp(java.lang.String)[pri:0, instance:com.test.apptest.test.Testkayak@91161c7]" name="launchApp" is-config="true" duration-ms="6882" started-at="2018-02-15T12:24:43Z" finished-at="2018-02-15T12:24:50Z">
+        <test-method status="PASS" signature="launchApp(java.lang.String)[pri:0, instance:com.test.apptest.test.Testkayak@91161c7]" name="launchApp" is-config="true" duration-ms="6297" started-at="2018-02-15T18:42:37Z" finished-at="2018-02-15T18:42:43Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="testKayakApp()[pri:0, instance:com.test.apptest.test.Testkayak@91161c7]" name="testKayakApp" duration-ms="65429" started-at="2018-02-15T12:24:50Z" finished-at="2018-02-15T12:25:55Z">
+        <test-method status="PASS" signature="testKayakApp()[pri:0, instance:com.test.apptest.test.Testkayak@91161c7]" name="testKayakApp" duration-ms="28822" started-at="2018-02-15T18:42:43Z" finished-at="2018-02-15T18:43:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testKayakApp -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.test.apptest.test.Testkayak@91161c7]" name="closeBrowser" is-config="true" duration-ms="783" started-at="2018-02-15T12:25:56Z" finished-at="2018-02-15T12:25:57Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.test.apptest.test.Testkayak@91161c7]" name="closeBrowser" is-config="true" duration-ms="790" started-at="2018-02-15T18:43:12Z" finished-at="2018-02-15T18:43:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

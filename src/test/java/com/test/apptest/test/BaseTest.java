@@ -1,5 +1,6 @@
 package com.test.apptest.test;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -9,12 +10,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 
+import com.test.apptest.properties.ConfigReader;
+
+
 @Listeners(com.test.apptest.util.TestListeners.class)
 public class BaseTest {
+	
+	ConfigReader conObj=new ConfigReader();
 	public WebDriver driver;	
 	@Parameters("browser")
 	@BeforeClass
-	public void launchApp(String browser)
+	public void launchApp(String browser) throws IOException
 	{
 		 /*if(browser.equalsIgnoreCase("firefox")) {
 			 System.setProperty("webdriver.gecko.driver", "browserDriver\\geckodriver.exe");
@@ -38,7 +44,11 @@ public class BaseTest {
 		 	  driver = new ChromeDriver();
 		 
 		 } 
-		driver.get("https://www.tripadvisor.in/");	
+		//propobj.testConfig();
+		 
+		//driver.get("https://www.tripadvisor.in/");	
+		String url1=conObj.getUrl();
+		driver.get(url1);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				
